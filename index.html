@@ -1,103 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeleCine</title>
-    <link rel="shortcut icon" href="/Public/images/icono_practico1.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="/Public/css/styles.css">
+    <title>Ejemplo con Google Fonts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="Public/css/styles.css">
+
 </head>
 
 <body>
-    <header class="header-inicio fade-in">
-        <h1>Beinvenidos a TeleCine</h1>
+    <header>
+        <h1>Bienvenidos a TeleCine</h1>
     </header>
-    <nav class="nav-inicio">
-        <ul class="ul-inicio">
-            <li> <a href="#">Inicio</a></li>
-            <li><a href="">Noticias</a></li>
-            <li><a href="">Programas</a></li>
-            <li><a href="/views/contacto.html">Contacto</a></li>
-            <li><a href="/views/galeria.html">Galería</a></li>
-        </ul>
 
-    </nav>
-    
-    <main class="main-inicio">
-        <h2>Programas de Hoy</h2>
-        <ol>
-            <li>Programa de Noticias</li>
-            <li>Película de Acción</li>
-            <li>Documental de la Naturaleza</li>
-        </ol>
-
-        <h2>Categorías Populares</h2>
-        <ul>
-            <li>Acción</li>
-            <li>Comedia</li>
-            <li>Drama</li>
-            <li>Documentales</li>
-        </ul>
-        <audio controls autoplay loop src="/Public/musica/TeleCine Jingle.mp3"></audio>
-        <h2>Programación de Hoy</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Hora</th>
-                    <th>Programa</th>
-                    <th>Género</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>10:00 AM</td>
-                    <td>Noticias de la Mañana</td>
-                    <td>Noticias</td>
-                </tr>
-                <tr>
-                    <td>12:00 PM</td>
-                    <td>Película de Acción</td>
-                    <td>Acción</td>
-                </tr>
-                <tr>
-                    <td>03:00 PM</td>
-                    <td>Documental de la Naturaleza</td>
-                    <td>Documental</td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Barra Navegacion -->
+    <ul class="nav justify-content-center bg-primary-subtle">
+        <li class="nav-item">
+            <a class="nav-link active text-secondary-emphasis" aria-current="page" href="#"><strong>Inicio</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary-emphasis" href="#inicio"><strong>Programas de Hoy</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary-emphasis" href="#popular"><strong>Categoria Populares</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary-emphasis" href="#comunidad"><strong>Comunidad</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary-emphasis" href="#ubicacion"><strong>Ubicacion</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary-emphasis" href="#contacto"><strong>Contacto</strong></a>
+        </li>
+    </ul>
+    <main>
         <br>
-        <a href="/views/contacto.html">Ver Contactos</a>
-        <a href="https://www.youtube.com" target="_blank">Visita nuestro canal en YouTube</a>
-        <a href="correoElectronico.contacto@telecine.com">Contáctanos por correo</a>
-        <a href="tel:3854350417">Llámanos al 3854350417</a>
+        <!-- Programas Hoy -->
+        <section id="inicio">
+            <h2>Programas de Hoy</h2>
+
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Public/images/AccionC.jpeg" class="d-block w-100" alt="Cine Accion">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Cine Accion</h2>
+                            <h2>22:00 Hs</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Public/images/NoticieroC.jpeg" class="d-block w-100" alt="Noticias">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Noticias</h2>
+                            <h2>21:00 Hs</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Public/images/NaturalezaC.jpeg" class="d-block w-100" alt="Naturaleza">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Documentales de Naturaleza</h2>
+                            <h2>19:00 Hs</h2>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
         <br>
-        <h2>Ubicación</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.9508140231055!2d-64.2598156801312!3d-27.786797547587597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b52116541bda1%3A0x63357d1eff4af526!2sPlaza%20Libertad%20Santiago%20del%20Estero!5e0!3m2!1ses-419!2sar!4v1726931983177!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <h2>Video de Presentación del Rubius</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vPAKpEFQ2p0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <!-- Categorias Populares  -->
+        <section id="popular">
+            <h2>Categorias Populares</h2>
+
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="card bg-primary-subtle">
+                            <img src="Public/images/Comedia.jpeg" class="card-img-top" alt="Imagen de la tarjeta 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Comedia</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <div class="card bg-primary-subtle">
+                            <img src="Public/images/Accion.jpg" class="card-img-top" alt="Imagen de la tarjeta 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Cine Acción</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <div class="card bg-primary-subtle">
+                            <img src="Public/images/Naturaleza.jpeg" class="card-img-top" alt="Imagen de la tarjeta 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Documentales</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card bg-primary-subtle">
+                            <img src="Public/images/Drama.jpeg" class="card-img-top" alt="Imagen de la tarjeta 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Drama</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Audio -->
+        <section id="comunidad">
+            <h2>Sugerencias de Nuestra Comunidad</h2>
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card bg-primary-subtle">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Lament - Adam MacDougall</h5>
+                                <audio controls>
+                                    <source src="Public/musica/Mother's Lament - Adam MacDougall.mp3" type="audio/mpeg">
+                                    Tu navegador no soporta la etiqueta de audio.
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="card bg-primary-subtle">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Pick Up - Adam MacDougall</h5>
+                                <audio controls>
+                                    <source src="Public/musica/Pick Up - Adam MacDougall.mp3" type="audio/mpeg">
+                                    Tu navegador no soporta la etiqueta de audio.
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="card bg-primary-subtle">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Q Train - Adam MacDougall</h5>
+                                <audio controls>
+                                    <source src="Public/musica/Q Train - Adam MacDougall.mp3" type="audio/mpeg">
+                                    Tu navegador no soporta la etiqueta de audio.
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Videos -->
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card bg-primary-subtle mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Presentación Skin del Rubius</h5>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/vPAKpEFQ2p0"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-primary-subtle mb-4 ">
+                            <div class="card-body">
+                                <h5 class="card-title">Entrevista Exclusiva a Jordi Wild</h5>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/5h82vcFEwzQ"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-        <h2>Entrevista Exclusiva a Jordi Wild</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/5h82vcFEwzQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </section>
+
         <br>
-        <div class="transition-hover">
-            Pasa el mouse sobre mí
-        </div>
-        <br>
-        <div class="slide-in">
-            ¡Yo me deslizo hacia adentro!
-        </div>
 
+        <!-- Ubicacion -->
+        <section id="ubicacion">
+            <h2>Sede Central</h2>
+            <div class="container mt-5">
+                <div class="card bg-primary-subtle">
+                    <div class="card-body">
+                        <h5 class="card-title">Nuestra Ubicacion</h5>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.9508140231055!2d-64.2598156801312!3d-27.786797547587597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b52116541bda1%3A0x63357d1eff4af526!2sPlaza%20Libertad%20Santiago%20del%20Estero!5e0!3m2!1ses-419!2sar!4v1726931983177!5m2!1ses-419!2sar"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
 
-
+        </section>
+        <!-- Contacto -->
+        <section id="contacto">
+            <h2> Contacto </h2>
+            <div class="container mt-5">
+                <div class="card bg-primary-subtle">
+                    <div class="card-body">
+                        <h5 class="card-title">Formulario de Contacto</h5>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Correo Electronico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="nombre@servicio.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
-    <footer class="footer-inicio">
-
-    </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+<footer>
+    <br>
+    <h2>Telecine Copyright 2024</h2>
+</footer>
 
 </html>
